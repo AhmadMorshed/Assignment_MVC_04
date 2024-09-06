@@ -1,0 +1,86 @@
+﻿@model Employee
+@* @{
+    ViewDate["Title"] = "Create";
+} *@
+<h1>Create New Employee</h1>
+<br />
+<br />
+
+
+<from asp-action="Create">
+    @* asp-controller="Department" *@
+
+
+    <div class="from-group">
+        <label class="col-form-lable" asp-for="Name"></label>
+        <input type="text" asp-for="Name" class="from-control" />
+
+        @*   <span asp-validation-for="@Model.Code" class="text-danger"></span> *@
+        <br />
+    </div>
+    <div class="from-group">
+        <label class="col-form-lable" asp-for="Id"></label>
+        <input type="text" asp-for="Id" class="from-control" />
+
+        @*   <span asp-validation-for="@Model.Name" class="text-danger"></span> *@
+
+        <br />
+    </div>
+    <div class="from-group">
+        <label class="col-form-lable" asp-for="Email"></label>
+        <input type="text" asp-for="Email" class="from-control" />
+
+        @*   <span asp-validation-for="@Model.Name" class="text-danger"></span> *@
+
+        <br />
+    </div>    <div class="from-group">
+        <label class="col-form-lable" asp-for="Address"></label>
+        <input type="text" asp-for="Address" class="from-control" />
+
+        @*   <span asp-validation-for="@Model.Name" class="text-danger"></span> *@
+
+        <br />
+    </div>    <div class="from-group">
+        <label class="col-form-lable" asp-for="HiringDate"></label>
+        <input type="text" asp-for="HiringDate" class="from-control" />
+
+        @*   <span asp-validation-for="@Model.Name" class="text-danger"></span> *@
+
+        <br />
+    </div>    <div class="from-group">
+        <label class="col-form-lable" asp-for="Department"></label>
+        <input type="text" asp-for="Department" class="from-control" />
+
+        @*   <span asp-validation-for="@Model.Name" class="text-danger"></span> *@
+
+        <br />
+    </div>    <div class="from-group">
+        <label class="col-form-lable" asp-for="DepartmentId"></label>
+        <input type="text" asp-for="DepartmentId" class="from-control" />
+
+        @*   <span asp-validation-for="@Model.Name" class="text-danger"></span> *@
+
+        <br />
+    </div>    <div class="from-group">
+        <label class="col-form-lable" asp-for="ImageUrl"></label>
+        <input type="text" asp-for="ImageUrl" class="from-control" />
+
+        @*   <span asp-validation-for="@Model.Name" class="text-danger"></span> *@
+
+        <br />
+    </div>
+    @Html.ValidationSummary(true, "EmployeeErrors", "Error while Adding Employee");
+    <br />
+
+    <input type="Submit" value="Create" class="btn btn-primary" />
+    <a asp-action="Index" class="btn btn-light">Back To List</a>
+
+</from>
+
+
+
+@* @section Scripts
+{
+    <partial name="_ValidationScriptsPartial"/>
+}
+ *@
